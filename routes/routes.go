@@ -1,14 +1,14 @@
 package routes
 
 import (
+	"github.com/Srishti0610/ecommerce-yt/controllers"
 	"github.com/gin-gonic/gin"
-	"github.com/srishti/ecommerce-yt/controllers"
 )
 
 func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.POST("/users/signup", controllers.SignUp())
 	incomingRoutes.POST("/users/login", controllers.Login())
-	incomingRoutes.POST("/admin/addproduct", controllers.ProductViewAdmin())
+	incomingRoutes.POST("/admin/addproduct", controllers.ProductViewerAdmin())
 	incomingRoutes.GET("/users/productview", controllers.SearchProduct())
 	incomingRoutes.GET("/users/search", controllers.SearchProductByQuery())
 }
